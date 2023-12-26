@@ -1,0 +1,27 @@
+---
+const {datosLanding} = Astro.props 
+
+const {imegen_1} = datosLanding
+---
+
+<div class="section-1 w-full h-auto py-8">
+    <div class="row-section-1 w-[90%] mx-auto max-w-[1140px] flex flex-col-reverse justify-between md:flex-row md:justify-between md:items-center h-auto py-5">
+       <div class="txt-1 md:w-[50%] h-[350px] flex flex-col justify-center md:h-[500px] ">
+           <p class="text-[22px] text-center md:text-left md:text-[26px] md:m-3 text-[#808080]">{datosLanding.texto_1} <span class="text-[#cddd00]">{datosLanding.resaltado_1}</span></p> 
+           <p class="text-[22px] md:m-3 text-center md:text-left text-[#808080]"> <span class="text-[#cddd00] uppercase">{datosLanding.resaltado_3}</span> {datosLanding.texto_3}</p>
+           <a href="https://api.whatsapp.com/send?phone=526672320689&text=Hola%20necesito%20informacion" class=" w-full md:w-[180px] py-3 bg-[#333333] text-white flex justify-center items-center mt-3 md:m-3">Solicitar Información</a>
+       </div>
+       <div class="img-1 md:w-[50%] flex justify-end">
+           <div class="content-img border-4 border-solid border-[#cddd00]">
+               <img src={datosLanding.imagen_1.url} alt="" class="h-[500px] md:relative md:bottom-5 md:left-5 lazyload">
+           </div>
+         
+       </div> 
+    </div>    
+</div>  
+
+<style>
+   .txt-1  {
+       font-family: 'Lato', sans-serif;
+   }
+</style>

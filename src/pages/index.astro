@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro'; 
+import Seccion1 from '../components/Seccion1.astro';
+import Modelos from '../components/Modelos.astro';
+import Amenidades from '../components/Amenidades.astro';
+import Galeria from '../components/Galeria.astro';
+
+const data = await fetch ('https://www.desarrollostiva.com/wp-json/wp/v2/arcosanto?acf_format=standard') 
+const datos = await data.json() 
+
+const datosLanding = datos[0].acf
+console.log(datosLanding)
+const imagenGaleria = datos[0].acf.galeria
+ 
+--- 
+   
+<Layout title="Welcome to Astro.">  
+	<Seccion1 
+	datosLanding={datosLanding}
+	/>
+	<Modelos 
+	datosLanding={datosLanding}
+	/>
+	<Galeria 
+	 imagenGaleria={imagenGaleria}
+	/>
+	<Amenidades 
+	 datosLanding={datosLanding}
+	/>
+	
+</Layout>
+  
+<style> 
+	    
+</style>
+
+<script>
+
+</script>
+ 

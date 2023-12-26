@@ -1,0 +1,32 @@
+---
+
+const {datosLanding} = Astro.props
+const {san_javier,texto_sanjavier,san_pablo,texto_sanpablo,san_pedro,texto_sanpedro} = datosLanding
+
+
+---
+
+<div class="modelos w-ful h-auto py-20">
+    <h2 class="text-white  text-center text-5xl relative bottom-4">Modelos</h2>
+    <div class="row-modelos w-[90%] mx-auto max-w-[1140px] flex flex-col justify-between items-center md:flex-row md:justify-between md:items-center">
+        <div class="malaga py-4 m-3">
+           <img src={san_javier.url} alt="malaga" loading="lazy">
+           <h3 class="text-white uppercase text-[26px] flex flex-col justify-between items-center text-3xl mt-2">{texto_sanjavier}</h3>
+        </div>
+        <div class="almeria py-4 m-3">
+            <img src={san_pablo.url} alt="almeria" loading="lazy">
+            <h3 class="text-white uppercase text-[26px] flex flex-col justify-between items-center text-3xl mt-2">{texto_sanpablo}</h3>
+        </div>
+        <div class="almeria-2 py-4 m-3">
+         <img src={san_pedro.url} alt="almeria2" loading="lazy">
+         <h3 class="text-white uppercase text-[26px] flex flex-col justify-between items-center text-3xl mt-2">{texto_sanpedro}</h3>
+        </div>
+    </div>
+</div> 
+
+<style>
+     .modelos{
+        background-image: url('https://www.desarrollostiva.com/wp-content/uploads/2023/12/00_FondoModelos.png');
+     }
+
+</style>

@@ -1,0 +1,13 @@
+---
+const {imagenGaleria} = Astro.props
+---
+
+<div class="galeria w-full h-auto py-[140px] ">
+    <h2 class="text-[#333333] text-center text-4xl  uppercase relative bottom-[70px]">Alberca y Roof Garden</h2>
+   <div class="row-galeria w-[90%] mx-auto flex flex-col justify-center items-center">
+        <div class="contenedor-galeria border-solid border-4 border-[#618514]"> 
+           <img src={imagenGaleria.url} alt="galeria" class="relative bottom-8 left-5" loading="lazy">
+        </div>
+        
+   </div>
+</div> 
