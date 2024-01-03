@@ -22,17 +22,28 @@ const imagenGaleria = datos[0].acf.galeria
 	<Modelos 
 	datosLanding={datosLanding}
 	/>
-	<Galeria 
+	<Galeria  
 	 imagenGaleria={imagenGaleria}
 	/>
 	<Amenidades 
 	 datosLanding={datosLanding}
 	/>
+	<a href="https://api.whatsapp.com/send?phone=526672320689&text=Hola%20necesito%20informacion" class="whatsapp"><img src={datosLanding.whatsapp.url} alt="whatsapp"> </a>
+	
 	
 </Layout>
   
 <style> 
-	    
+
+    .whatsapp{
+		position: fixed; 
+		right: 3%;
+		bottom: 50%;
+	}
+	 .whatsapp img{
+		width: 64px;
+		height: 64px;
+	 }
 </style>
 
 <script>
